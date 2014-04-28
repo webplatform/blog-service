@@ -85,7 +85,7 @@
       <ul class="links">
         <li><a href="http://docs.webplatform.org/wiki/Main_Page">The Docs</a></li>
         <li><a href="http://docs.webplatform.org/wiki/WPD:Community">Connect</a></li>
-        <li><a href="http://docs.webplatform.org/wiki/WPD:Editors_Guide">Contribute</a></li>
+        <li><a href="http://docs.webplatform.org/wiki/WPD:Contributors_Guide">Contribute</a></li>
         <li><a href="http://blog.webplatform.org" class="active">Blog</a></li>
       </ul>
    </div>
