@@ -2,14 +2,34 @@
 
 Theme for [blog.webplatform.org](http://blog.webplatform.org/) for [WebPlatform](http://www.webplatform.org/).
 
+
+## Expected plugins
+
+Those plugins are expected to be installed. Installation as submodules #TODO
+
+* public-post-preview
+* w3-total-cache
+* wp-piwik
+
+
 ## To install
 
-**Note**: Althoug it seems to be a child theme of Twentyeleven, but in fact it is a copy of it.
+* Clone this repo
+* Get all submodules
 
-* Have a basic WordPress installed and working
-* Copy files in `wp-content/themes/webplatform/`
-* Activate it in the WordPress admin panel
-* Done!
+        git submodule update --init --recursive
+
+* Make sure you have the following php modules:
+  * php5-memcache
+* Install the *Expected plugins* (see note above this section)
+* Copy error pages static files.  Automate with salt #TODO
+
+        wget www.webplatform.org/errors/{503,500,404,403}.html
+
+## Documentation
+
+* [How to use Git with WordPress](http://blog.g-design.net/post/60019471157/managing-and-deploying-wordpress-with-git)
+* [WordPress Packagist](http://wpackagist.org/)
 
 
 ## Please note

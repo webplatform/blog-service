@@ -1,11 +1,6 @@
 <?php
 /**
- * The template for displaying Archive pages.
- *
- * Used to display archive-type pages if nothing more specific matches a query.
- * For example, puts together date-based pages if no date.php file exists.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * Template used to display Tag Archive pages
  *
  * @package WordPress
  * @subpackage Twenty_Eleven
@@ -20,17 +15,23 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h1 class="page-title">
-						<?php if ( is_day() ) : ?>
-							<?php printf( __( 'Daily Archives: %s', 'twentyeleven' ), '<span>' . get_the_date() . '</span>' ); ?>
-						<?php elseif ( is_month() ) : ?>
-							<?php printf( __( 'Monthly Archives: %s', 'twentyeleven' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'twentyeleven' ) ) . '</span>' ); ?>
-						<?php elseif ( is_year() ) : ?>
-							<?php printf( __( 'Yearly Archives: %s', 'twentyeleven' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'twentyeleven' ) ) . '</span>' ); ?>
-						<?php else : ?>
-							<?php _e( 'Blog Archives', 'twentyeleven' ); ?>
-						<?php endif; ?>
-					</h1>
+					<h1 class="page-title"><?php
+						printf( __( 'Tag Archives: %s', 'twentyeleven' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+					?></h1>
+
+					<?php
+						$tag_description = tag_description();
+						if ( ! empty( $tag_description ) ) {
+							/**
+							 * Filter the default Twenty Eleven tag description.
+							 *
+							 * @since Twenty Eleven 1.0
+							 *
+							 * @param string The default tag description.
+							 */
+							echo apply_filters( 'tag_archive_meta', '<div class="tag-archive-meta">' . $tag_description . '</div>' );
+						}
+					?>
 				</header>
 
 				<?php twentyeleven_content_nav( 'nav-above' ); ?>
@@ -39,9 +40,11 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php
-						/* Include the Post-Format-specific template for the content.
+						/*
+						 * Include the Post-Format-specific template for the content.
 						 * If you want to overload this in a child theme then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+						 * called content-___.php (where ___ is the Post Format name) and that
+						 * will be used instead.
 						 */
 						get_template_part( 'content', get_post_format() );
 					?>
