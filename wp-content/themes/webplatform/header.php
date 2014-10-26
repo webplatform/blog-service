@@ -76,7 +76,7 @@
 		<div id="p-logo">
 			 <a href="//www.webplatform.org/"title="Visit the main page"></a>
 		</div>
-		<!-- /logo -->	
+		<!-- /logo -->
 		<?php get_search_form(); ?>
 	</div>
 </header>
@@ -87,6 +87,7 @@
         <li><a href="//docs.webplatform.org/wiki/WPD:Community">Connect</a></li>
         <li><a href="//docs.webplatform.org/wiki/WPD:Contributors_Guide">Contribute</a></li>
         <li><a href="//blog.webplatform.org" class="active">Blog</a></li>
+        <li><a href="//project.webplatform.org">Issues</a></li>
       </ul>
    </div>
 </nav>
