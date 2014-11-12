@@ -16,9 +16,16 @@ $table_prefix  = 'wp_';
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+  define('ABSPATH', dirname(__FILE__) . '/');
 
 require_once(__DIR__."/local.php");
+
+if(!isset($GLOBALS['siteTopLevelDomain'])) {
+  $GLOBALS['siteTopLevelDomain'] = 'webplatform.org';
+}
+if(!isset($GLOBALS['wpd']['memcache_array'])){
+  $GLOBALS['wpd']['memcache_array'] = array('localhost:11211');
+}
 
 define('WP_SITEURL', VHOST_URL . '/wordpress');
 define('WP_HOME',    VHOST_URL);

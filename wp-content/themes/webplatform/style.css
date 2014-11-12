@@ -57,27 +57,27 @@ footer, header, hgroup, menu, nav, section {
 	    padding-left: 1.2em;
 	    font-size: 95%;
 	}
-	
+
 	#page aside > ol > li:first-child,
 	#page aside > ul > li:first-child {
 	    border-top: 0;
 	}
-	
+
 	#page aside > ol > li,
 	#page aside > ul > li {
 	    padding: 1em 0;
 	    margin-bottom: 0;
 	    list-style: none;
 	    border-top: 1px solid hsla(0,0%,100%,.5);
-	    border-bottom: 1px solid hsl(183, 48%, 65%); 
+	    border-bottom: 1px solid hsl(183, 48%, 65%);
 	    color: hsl(196, 56%, 33%); /* otherwise list-style will give grey bullets */
 	}
-	
+
 	#page aside > ol > li:last-child,
 	#page aside > ul > li:last-child {
 	    border-bottom: 0;
 	}
-	
+
 	#page aside > ol > li li,
 	#page aside > ul > li li {
 	    list-style: disc;
@@ -112,7 +112,7 @@ footer, header, hgroup, menu, nav, section {
     width: 21px;
     height: 21px;
     margin-left: -10px;
-    background-image: url(http://docs.webplatform.org/w/skins/webplatform/images/sidebar-top.svg);
+    background-image: url(//docs.webplatform.org/w/skins/webplatform/images/sidebar-top.svg);
 }
 
 
@@ -495,11 +495,11 @@ input[type=text] {
 	.entry-meta time span {
 		display: block;
 	}
-	
+
 	.entry-meta time .month {
 		font-size: 130%;
 	}
-	
+
 	.entry-meta time .day {
 		font-size: 200%;
 		font-weight: bold;
@@ -1394,18 +1394,18 @@ section.recent-posts .other-recent-posts li:after {
 	#nav-single {
 		float: none;
 	}
-	
+
 		.nav-previous > a,
 		.nav-next > a {
 			position: static;
 			padding: 0 .5em;
 			font-size: 100%;
 		}
-		
+
 		.nav-previous > a {
 			float: left;
 		}
-		
+
 		.nav-next > a {
 			float: right;
 		}
@@ -1776,7 +1776,7 @@ a.comment-reply-link > span {
 	margin: 20px 0;
 	padding: .3em .6em .45em;
 	box-shadow: 0px 1px 2px rgba(0,0,0,0.3), 0 -.2em rgba(0,0,0,.5) inset;
-	
+
 	color: white;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
 	font-size: 130%;
@@ -1954,7 +1954,7 @@ p.comment-form-comment {
 		padding-right: 20px;
 		width: auto;
 	}
-	
+
 	/* Make sure we have room for our comment avatars */
 	.commentlist {
 		width: 100%;
@@ -2040,7 +2040,7 @@ p.comment-form-comment {
 		display: block;
 		position: static;
 	}
-	
+
 	/* Talking avatars take up too much room at this size */
 	.commentlist > li.comment,
 	.commentlist > li.pingback {
@@ -2156,14 +2156,14 @@ p.comment-form-comment {
 		margin: 0;
 		width: auto;
 	}
-	
+
 	.entry-meta .edit-link a {
 		display: none;
 	}
 	#content nav {
 		display: none;
 	}
-	
+
 	.entry-title {
 		font-size: 21pt;
 	}
