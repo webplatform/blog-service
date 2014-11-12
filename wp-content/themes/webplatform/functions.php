@@ -44,6 +44,12 @@
 if ( ! isset( $content_width ) )
 	$content_width = 584;
 
+function wpd_after_setup_theme() {
+  update_option('piwik_url', $GLOBALS['wpd']['piwik_url']);
+}
+
+add_action( 'after_setup_theme', 'wpd_after_setup_theme');
+
 /**
  * Tell WordPress to run twentyeleven_setup() when the 'after_setup_theme' hook is run.
  */
@@ -131,7 +137,7 @@ function twentyeleven_setup() {
 		// Callback used to display the header preview in the admin.
 		'admin-preview-callback' => 'twentyeleven_admin_header_image',
 	);
-	
+
 	add_theme_support( 'custom-header', $custom_header_support );
 
 	if ( ! function_exists( 'get_custom_header' ) ) {
@@ -221,7 +227,7 @@ function twentyeleven_header_style() {
 	// If no custom options for text are set, let's bail.
 	if ( $text_color == HEADER_TEXTCOLOR )
 		return;
-		
+
 	// If we get this far, we have custom styles. Let's do this.
 	?>
 	<style type="text/css">
@@ -582,7 +588,7 @@ function twentyeleven_posted_on() {
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
-		'<span class="month">' . get_the_date('M') . '</span> ' . 
+		'<span class="month">' . get_the_date('M') . '</span> ' .
 		'<span class="day">' . get_the_date('d') . '</span> ' .
 		'<span class="year">' . get_the_date('Y') . '</span>',
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
