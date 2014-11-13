@@ -46,6 +46,7 @@ if ( ! isset( $content_width ) )
 
 function wpd_after_setup_theme() {
   update_option('piwik_url', $GLOBALS['wpd']['piwik_url']);
+  show_admin_bar(false);
 }
 
 add_action( 'after_setup_theme', 'wpd_after_setup_theme');

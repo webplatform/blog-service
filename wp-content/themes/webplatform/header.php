@@ -46,7 +46,7 @@
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="stylesheet" href="//docs.<?php echo $GLOBALS['siteTopLevelDomain']; ?>/w/load.php?debug=false&lang=en&modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.webplatform&only=styles&skin=webplatform&*" />
+<link rel="stylesheet" href="https://docs.<?php echo $GLOBALS['siteTopLevelDomain']; ?>/w/load.php?debug=false&lang=en&modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.webplatform&only=styles&skin=webplatform&*" />
 <link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/webplatform/style.css" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
