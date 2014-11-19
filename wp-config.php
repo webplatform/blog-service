@@ -27,10 +27,5 @@ if(!isset($GLOBALS['wpd']['memcache_array'])){
   $GLOBALS['wpd']['memcache_array'] = array('localhost:11211');
 }
 
-define('WP_SITEURL', VHOST_URL . '/wordpress');
-define('WP_HOME',    VHOST_URL);
-define('WP_CONTENT_URL', VHOST_URL . '/wp-content');
-define('WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'] . '/wp-content');
-
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
