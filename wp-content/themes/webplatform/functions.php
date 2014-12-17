@@ -45,7 +45,9 @@ if ( ! isset( $content_width ) )
 	$content_width = 584;
 
 function wpd_after_setup_theme() {
-  update_option('piwik_url', $GLOBALS['wpd']['piwik_url']);
+	if(isset($GLOBALS['wpd']['piwik_url']) && $GLOBALS['wpd']['piwik_url'] !== null) {
+	  update_option('piwik_url', $GLOBALS['wpd']['piwik_url']);
+	}
   show_admin_bar(false);
 }
 

@@ -65,6 +65,11 @@
 	 * as styles, scripts, and meta tags.
 	 */
 	wp_head();
+
+	if(isset($GLOBALS['wpd']['meta_robots']) && $GLOBALS['wpd']['meta_robots'] !== null) {
+	  echo PHP_EOL.'<meta name="robots" content="'.$GLOBALS['wpd']['meta_robots'].'" />'.PHP_EOL;
+	}
+
 ?>
 </head>
 

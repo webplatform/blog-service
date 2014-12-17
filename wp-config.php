@@ -26,6 +26,15 @@ if(!isset($GLOBALS['siteTopLevelDomain'])) {
 if(!isset($GLOBALS['wpd']['memcache_array'])){
   $GLOBALS['wpd']['memcache_array'] = array('localhost:11211');
 }
+if(!isset($GLOBALS['wpd']['piwik_url'])){
+  $GLOBALS['wpd']['piwik_url'] = null;
+}
+if(!isset($GLOBALS['wpd']['pagespeed_key'])){
+  $GLOBALS['wpd']['pagespeed_key'] = null;
+}
+if(!isset($GLOBALS['wpd']['meta_robots'])){
+  $GLOBALS['wpd']['meta_robots'] = null;
+}
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');

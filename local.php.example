@@ -7,6 +7,19 @@ require_once('lib/main.php');
 #error_reporting( -1 );
 #ini_set( 'display_errors', 1 );
 
+# IMPORTANT, Adjust! Vagrant environment is the following;
+$siteTopLevelDomain = 'local';
+
+
+##
+## Deployment settings, here are the defaults:
+##
+#$wpd['memcache_array'] = array('localhost:11211');
+#$wpd['pagespeed_key'] = null;
+#$wpd['piwik_url'] = null;
+#$wpd['meta_robots'] = null;
+#$siteTopLevelDomain = 'webplatform.org';
+
 /**
  * WebPlatform Blog
  *
@@ -18,7 +31,7 @@ define('WP_HOME',    'http://' . $_SERVER['SERVER_NAME']);
 define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/wordpress');
 define('WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'] . '/wp-content');
 define('WP_CONTENT_URL', 'http://' . $_SERVER['SERVER_NAME'] . '/wp-content');
-define('VHOST_URL', 'http://blog.webplatformstaging.org');
+define('VHOST_URL', 'http://blog.' . $siteTopLevelDomain );
 
 ## Enforce SSL:
 ##  * http://www.wpwhitesecurity.com/wordpress-security/definitive-guide-wordpress-ssl-setup/
