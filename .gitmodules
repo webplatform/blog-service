@@ -4,3 +4,12 @@
 [submodule "wp-content/plugins/public-post-preview"]
 	path = wp-content/plugins/public-post-preview
 	url = https://github.com/ocean90/public-post-preview.git
+[submodule "wp-content/plugins/revision-control"]
+	path = wp-content/plugins/revision-control
+	url = https://github.com/wp-plugins/revision-control.git
+[submodule "wp-content/plugins/wp-piwik"]
+	path = wp-content/plugins/wp-piwik
+	url = https://github.com/wp-plugins/wp-piwik.git
+[submodule "wp-content/plugins/total-cache"]
+	path = wp-content/plugins/total-cache
+	url = https://github.com/wp-plugins/w3-total-cache.git
