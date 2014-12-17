@@ -1,12 +1,6 @@
 [submodule "wordpress"]
 	path = wordpress
 	url = https://github.com/WordPress/WordPress.git
-[submodule "wp-content/plugins/w3-total-cache"]
-	path = wp-content/plugins/w3-total-cache
-	url = https://github.com/aziraphale/W3-Total-Cache.git
-[submodule "wp-content/plugins/wp-piwik"]
-	path = wp-content/plugins/wp-piwik
-	url = https://github.com/wp-plugins/wp-piwik.git
 [submodule "wp-content/plugins/public-post-preview"]
 	path = wp-content/plugins/public-post-preview
 	url = https://github.com/ocean90/public-post-preview.git
