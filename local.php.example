@@ -4,6 +4,9 @@
 
 require_once('lib/main.php');
 
+#error_reporting( -1 );
+#ini_set( 'display_errors', 1 );
+
 /**
  * WebPlatform Blog
  *
@@ -13,7 +16,6 @@ require_once('lib/main.php');
 
 define('WP_HOME',    'http://' . $_SERVER['SERVER_NAME']);
 define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/wordpress');
-define('WP_HOME',    'http://' . $_SERVER['SERVER_NAME']);
 define('WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'] . '/wp-content');
 define('WP_CONTENT_URL', 'http://' . $_SERVER['SERVER_NAME'] . '/wp-content');
 define('VHOST_URL', 'http://blog.webplatformstaging.org');
@@ -39,7 +41,7 @@ define('WP_DEBUG', false);
 /**
  * Database configuration
  */
-define('DB_NAME', 'wpblog');
+define('DB_NAME', 'wordpress');
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');
 define('DB_HOST', 'localhost');
