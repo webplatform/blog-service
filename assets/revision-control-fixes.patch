@@ -1,0 +1,22 @@
+diff --git i/wp-content/plugins/revision-control/revision-control.php w/wp-content/plugins/revision-control/revision-control.php
+index d0d3958..ade99f9 100644
+--- i/wp-content/plugins/revision-control/revision-control.php
++++ w/wp-content/plugins/revision-control/revision-control.php
+@@ -299,7 +299,7 @@ class Plugin_Revision_Control {
+ }
+ 
+ class Plugin_Revision_Control_Compat {
+-	function postmeta($meta, $post) {
++	public static function postmeta($meta, $post) {
+ 		if ( is_array($meta) )
+ 			return $meta;
+ 
+@@ -318,7 +318,7 @@ class Plugin_Revision_Control_Compat {
+ 		return $_meta;
+ 	}
+ 
+-	function options($options) {
++	public static function options($options) {
+ 		$_options = $options;
+ 		if ( ! is_array($options) ) { // Upgrade from 1.0 to 1.1
+ 			$options = array( 'post' => $options, 'page' => $options );

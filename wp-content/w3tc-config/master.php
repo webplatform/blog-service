@@ -15,9 +15,7 @@ return array(
 	'dbcache.file.locking' => false,
 	'dbcache.lifetime' => 180,
 	'dbcache.memcached.persistant' => true,
-	'dbcache.memcached.servers' => array(
-		0 => '127.0.0.1:11211', /* nutcracker */
-	),
+	'dbcache.memcached.servers' => $GLOBALS['wpd']['memcache_array'],
 	'dbcache.reject.cookie' => array(
 	),
 	'dbcache.reject.logged' => true,
@@ -46,9 +44,7 @@ return array(
 	'objectcache.engine' => 'memcached',
 	'objectcache.file.gc' => 3600,
 	'objectcache.file.locking' => false,
-	'objectcache.memcached.servers' => array(
-		0 => '127.0.0.1:11211', /* nutcracker */
-	),
+	'objectcache.memcached.servers' => $GLOBALS['wpd']['memcache_array'],
 	'objectcache.memcached.persistant' => true,
 	'objectcache.groups.global' => array(
 		0 => 'users',
@@ -70,9 +66,7 @@ return array(
 	'fragmentcache.engine' => 'file',
 	'fragmentcache.file.gc' => 3600,
 	'fragmentcache.file.locking' => false,
-	'fragmentcache.memcached.servers' => array(
-		0 => '127.0.0.1:11211', /* nutcracker */
-	),
+	'fragmentcache.memcached.servers' => $GLOBALS['wpd']['memcache_array'],
 	'fragmentcache.memcached.persistant' => true,
 	'fragmentcache.lifetime' => 180,
 	'fragmentcache.groups' => array(
@@ -85,9 +79,7 @@ return array(
 	'pgcache.file.nfs' => false,
 	'pgcache.file.locking' => false,
 	'pgcache.lifetime' => 3600,
-	'pgcache.memcached.servers' => array(
-		0 => '127.0.0.1:11211', /* nutcracker */
-	),
+	'pgcache.memcached.servers' => $GLOBALS['wpd']['memcache_array'],
 	'pgcache.memcached.persistant' => true,
 	'pgcache.check.domain' => true,
 	'pgcache.cache.query' => true,
@@ -257,7 +249,7 @@ return array(
 	'pgcache.prime.enabled' => true,
 	'pgcache.prime.interval' => 900,
 	'pgcache.prime.limit' => 10,
-	'pgcache.prime.sitemap' => 'http://blog.webplatform.org/sitemap.xml',
+	'pgcache.prime.sitemap' => 'http://blog.'.$GLOBALS['siteTopLevelDomain'].'/sitemap.xml',
 	'pgcache.prime.post.enabled' => true,
 	'minify.enabled' => false,
 	'minify.auto' => false,
@@ -266,9 +258,7 @@ return array(
 	'minify.file.gc' => 86400,
 	'minify.file.nfs' => false,
 	'minify.file.locking' => false,
-	'minify.memcached.servers' => array(
-		0 => '127.0.0.1:11211', /* nutcracker */
-	),
+	'minify.memcached.servers' => $GLOBALS['wpd']['memcache_array'],
 	'minify.memcached.persistant' => true,
 	'minify.rewrite' => true,
 	'minify.options' => array(
@@ -687,8 +677,8 @@ return array(
 	'config.path' => '',
 	'widget.latest.items' => 3,
 	'widget.latest_news.items' => 5,
-	'widget.pagespeed.enabled' => true,
-	'widget.pagespeed.key' => 'AIzaSyBd47ck7upE3Es0X_UqERCqu8q5jt7C7hQ',
+	'widget.pagespeed.enabled' => ((isset($GLOBALS['wpd']['pagespeed_key']) && $GLOBALS['wpd']['pagespeed_key'] !== null)?true:false),
+	'widget.pagespeed.key' => ((isset($GLOBALS['wpd']['pagespeed_key']) && $GLOBALS['wpd']['pagespeed_key'] !== null)?$GLOBALS['wpd']['pagespeed_key']:null),
 	'notes.wp_content_changed_perms' => true,
 	'notes.wp_content_perms' => true,
 	'notes.theme_changed' => false,

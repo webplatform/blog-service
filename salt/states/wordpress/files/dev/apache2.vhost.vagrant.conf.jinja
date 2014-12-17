@@ -1,0 +1,28 @@
+# vim: ai ft=apache syntax=apache ts=4 sw=4 sts=4 sr noet
+
+ServerName {{ vhost_name }}.local
+
+<VirtualHost *:80>
+  DocumentRoot /vagrant
+
+  <Directory "/vagrant">
+    DirectoryIndex index.php
+    Options FollowSymLinks
+    AllowOverride None
+    Require all granted
+    <IfModule mod_rewrite.c>
+      RewriteEngine On
+      RewriteBase /
+      RewriteRule ^index\.php$ - [L]
+      RewriteCond %{REQUEST_FILENAME} !-f
+      RewriteCond %{REQUEST_FILENAME} !-d
+      RewriteRule . /index.php [L]
+    </IfModule>
+  </Directory>
+
+  # Possible values include: debug, info, notice, warn, error, crit,
+  # alert, emerg.
+  LogLevel debug
+
+  CustomLog /var/log/apache2/vagrant.access.log combined
+</VirtualHost>

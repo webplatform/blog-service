@@ -10,6 +10,6 @@
 [submodule "wp-content/plugins/wp-piwik"]
 	path = wp-content/plugins/wp-piwik
 	url = https://github.com/wp-plugins/wp-piwik.git
-[submodule "wp-content/plugins/total-cache"]
-	path = wp-content/plugins/total-cache
+[submodule "wp-content/plugins/w3-total-cache"]
+	path = wp-content/plugins/w3-total-cache
 	url = https://github.com/wp-plugins/w3-total-cache.git
