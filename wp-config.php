@@ -35,6 +35,9 @@ if(!isset($GLOBALS['wpd']['pagespeed_key'])){
 if(!isset($GLOBALS['wpd']['meta_robots'])){
   $GLOBALS['wpd']['meta_robots'] = null;
 }
+if(!isset($GLOBALS['wpd']['main_stylesheet_url'])){
+  $GLOBALS['wpd']['main_stylesheet_url'] = 'https://docs.webplatform.org/w/load.php?debug=false&lang=en&modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.ui.button%7Cskins.webplatform&only=styles&skin=webplatform&*';;
+}
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');

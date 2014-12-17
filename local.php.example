@@ -10,7 +10,6 @@ require_once('lib/main.php');
 # IMPORTANT, Adjust! Vagrant environment is the following;
 $siteTopLevelDomain = 'local';
 
-
 ##
 ## Deployment settings, here are the defaults:
 ##
@@ -18,6 +17,7 @@ $siteTopLevelDomain = 'local';
 #$wpd['pagespeed_key'] = null;
 #$wpd['piwik_url'] = null;
 #$wpd['meta_robots'] = null;
+#$wpd['main_stylesheet_url'] = 'https://docs.webplatform.org/w/load.php?debug=false...';
 #$siteTopLevelDomain = 'webplatform.org';
 
 /**
@@ -27,10 +27,10 @@ $siteTopLevelDomain = 'local';
  *  * http://generatewp.com/wp-config/
  **/
 
-define('WP_HOME',    'http://' . $_SERVER['SERVER_NAME']);
-define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/wordpress');
+define('WP_HOME',    'http://blog.' . $siteTopLevelDomain);
+define('WP_SITEURL', 'http://blog.' . $siteTopLevelDomain . '/wordpress');
 define('WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'] . '/wp-content');
-define('WP_CONTENT_URL', 'http://' . $_SERVER['SERVER_NAME'] . '/wp-content');
+define('WP_CONTENT_URL', 'http://blog.' . $siteTopLevelDomain . '/wp-content');
 define('VHOST_URL', 'http://blog.' . $siteTopLevelDomain );
 
 ## Enforce SSL:
