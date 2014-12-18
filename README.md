@@ -74,12 +74,11 @@ Those plugins are expected to be installed. Installation as submodules #TODO
 
         mysql -u root wordpress < assets/fixtures-dev.sql
 
-1. Then enable manuall w3-total-cache
+1. Then allow writing on some folders.
+  Those are workarounds because /vagrant is not really in the VM and the web server would throw errors because the file system will fail
 
-        echo '<?php if(W3TC_WP_LOADING){ require_once(dirname(dirname(dirname(__FILE__)))."/wordpress/wp-load.php"); }' >> wp-content/plugins/w3tc-wp-loader.php
-        cp wp-content/plugins/total-cache/wp-content/advanced-cache.php wp-content/advanced-cache.php
-        mkdir wp-content/cache
-        mkdir wp-content/w3tc-config
+        mkdir /tmp/wp-cache
+        ln -s /vagrant/wp-content/cache /tmp/wp-cache
 
 
 ## Documentation
