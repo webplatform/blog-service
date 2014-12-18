@@ -92,6 +92,9 @@ Those plugins are expected to be installed. Installation as submodules #TODO
 
 1. [Forbid to update plugins](http://tkjune.com/disable-update-checking-of-wordpress-3/)
 2. Commit back upstream revision-control plugin patch using SVN. [See issue comment](https://wordpress.org/support/topic/php-errors-37?replies=2#post-6343317)
+3. Change Memcached handler?
+  * https://wordpress.org/plugins/memcached/
+  * https://wordpress.org/plugins/batcache/
 
 ## Please note
 
