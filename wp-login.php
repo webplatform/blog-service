@@ -1,1 +1,1 @@
-<?php header('Location: /wordpress/wp-login.php');>
+<?php header('Location: /wordpress/wp-login.php');
