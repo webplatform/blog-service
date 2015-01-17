@@ -78,7 +78,7 @@ Those plugins are expected to be installed. Installation as submodules #TODO
   Those are workarounds because /vagrant is not really in the VM and the web server would throw errors because the file system will fail
 
         mkdir /tmp/wp-cache
-        ln -s /vagrant/wp-content/cache /tmp/wp-cache
+        ln -s /tmp/wp-cache /vagrant/wp-content/cache
 
 
 ## Documentation

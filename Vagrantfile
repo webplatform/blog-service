@@ -12,6 +12,8 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider "virtualbox" do |v|
     v.name = "blog.local"
+    v.customize ["modifyvm", :id, "--cpuexecutioncap", "40"]
+    v.customize ["modifyvm", :id, "--memory", "3072"]
   end
 
   config.vm.provision :salt do |c|
