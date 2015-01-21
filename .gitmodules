@@ -3,13 +3,13 @@
 	url = https://github.com/WordPress/WordPress.git
 [submodule "wp-content/plugins/public-post-preview"]
 	path = wp-content/plugins/public-post-preview
-	url = https://github.com/ocean90/public-post-preview.git
+	url = git@source.webplatform.org:public-post-preview.git
 [submodule "wp-content/plugins/revision-control"]
 	path = wp-content/plugins/revision-control
-	url = https://github.com/wp-plugins/revision-control.git
+	url = git@source.webplatform.org:revision-control.git
 [submodule "wp-content/plugins/wp-piwik"]
 	path = wp-content/plugins/wp-piwik
-	url = https://github.com/wp-plugins/wp-piwik.git
+	url = git@source.webplatform.org:wp-piwik.git
 [submodule "wp-content/plugins/w3-total-cache"]
 	path = wp-content/plugins/w3-total-cache
-	url = https://github.com/wp-plugins/w3-total-cache.git
+	url = git@source.webplatform.org:w3-total-cache.git

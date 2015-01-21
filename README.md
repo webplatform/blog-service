@@ -7,10 +7,10 @@ Theme for [blog.webplatform.org](http://blog.webplatform.org/) for [WebPlatform]
 
 Those plugins are expected to be installed. Installation as submodules #TODO
 
-* public-post-preview
-* w3-total-cache
-* wp-piwik
-
+* [public-post-preview](https://wordpress.org/plugins/public-post-preview/) [git](https://github.com/ocean90/public-post-preview)
+* [w3-total-cache](https://wordpress.org/plugins/w3-total-cache/)
+* [wp-piwik](https://wordpress.org/plugins/wp-piwik/)
+* [revision-control](https://wordpress.org/plugins/revision-control/)
 
 ## To install
 
