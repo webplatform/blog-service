@@ -1,2 +1,3 @@
 local.php
 .vagrant/
+node_modules/

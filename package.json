@@ -1,0 +1,10 @@
+{
+  "name": "webplatform-blog",
+  "version": "2.0.0",
+  "description": "WebPlatform.org Blog",
+  "repository": "https://github.com/webplatform/blog-service",
+  "homepage": "https://docs.webplatform.org/wiki/WPD:Infrastructure#blog",
+  "devDependencies": {
+    "grunt-cli": "~0.1"
+  }
+}
